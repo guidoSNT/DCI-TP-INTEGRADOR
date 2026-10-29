@@ -1,8 +1,24 @@
-## Propuesta ##
-En este directorio debe ir OBLIGATORIAMENTE la información que se presentó al momento de acordar la propuesta de TP con el docente. Es decir:
-* Fotos e imágenes de las placas de ambos lados si es una réplica. 
-* Fotos e imágenes de los prototipos cableados o pruebas si es un trabajo de tesis.
-* Urls o info de origen. 
-* Circuito esquemático de referencia (si es una réplica) o borrador si es un trabajo de tesis.
-* Resumen de la función u objetivo del circuito si es un trabajo de tesis.
-* Cualquier otra nota que se haya usado para definir el TP en el formulario de propuesta.
+# Sensado de calidad de aire/ambiente (IEQ)
+
+El objetivo de este projecto es crear un simple PCB con solo las conexiones para un puerto I2C (SDA, SCL, 3V3 y GND) y que permita medir las variables necesarias para estimar la calidad del aire indoor.
+
+
+## Variables a medir
+
+Se considero que las variables importantes a tener en cuenta son:
+- Temperatura.
+- Humedad.
+- VOCs (son particulas comunmente relacionadas a la cocina, cualquier spray y respiracion humana).
+- NOx (NO y NO2 relacionados a la combustion que suelen concentrarse si hay una mala ventilacion).
+
+Se podrian haber incluido tambien un sensor que mida temperatura de la iluminacion o medicion de intensidad luminica, pero ambas variables son menos relevantes y por lo tanto se las descarto.
+
+## Sensores
+
+Como el objetivo es tener una conexion simple con I2C, se busco incorporar sensores unicamente que utilizen este protocolo y que se alimenten con 3V3. Por lo tanto se eligieron los siguientes componentes:
+
+- `SHT3x-DIS`: Temperatura y humedad.
+- `BMP280`: Presión.
+- `SGP41`: Concentración de VOCs y NOx.
+
+Los eleccion no solo fue porque cumplen las condiciones mencionadas, sino que ademas estoy familiarizado con los primeros dos sensores. Por otro lado el SGP41 es de Sensirion que tambien produce el SHT3x y posee un datasheet similar a este.
