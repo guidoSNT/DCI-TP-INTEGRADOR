@@ -1,3 +1,3 @@
 ## Información complementaria ##
-Para el alcance del TP solo es necesario colocar las hojas de datos más relevantes que se usaron en el diseño de PCB.
-Pero el alumno puede completarlo tanto como desee.
+
+Se incluyen los datasheets de los 3 ICs y dos esquematicos de los modulos de Adafruit.
